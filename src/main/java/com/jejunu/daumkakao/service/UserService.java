@@ -6,4 +6,10 @@ public interface UserService {
 
 	java.util.List<User> list();
 
+	void enroll(User user);
+
+	User get(String name);
+
+	void delete(String name);
+
 }

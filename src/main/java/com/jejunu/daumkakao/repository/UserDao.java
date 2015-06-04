@@ -11,4 +11,14 @@ public interface UserDao {
 
 	List<User> findAll();
 
+	void insert(User user);
+
+	User findbyName(String name);
+
+	void update(User user);
+
+	void delete(String name);
+	
+	
+
 }

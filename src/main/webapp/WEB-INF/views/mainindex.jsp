@@ -43,7 +43,6 @@
 						<td>${user.name }</td>
 						<td><a href="renewAction?name=${user.name}">수정</a></td>
 						<td><a href="deleteAction?name=${user.name}">삭제</a></td>
-						
 						<td>${user.price }</td>
 						<td>${user.seller }</td>
 						<td>${user.day }</td>

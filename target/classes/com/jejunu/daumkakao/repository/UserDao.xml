@@ -8,18 +8,18 @@
 		from userinfo
 	</select>
 	<insert id="insert" parameterType="User">
-		insert into userinfo(name,price,seller,day) values(#{name}, #{price}, #{seller},#{day})
+		insert into userinfo(name,price,seller,day,productinform) values(#{name}, #{price},#{seller},#{day}, #{productinform})
 	</insert>
 	<delete id="delete">
-		delete from userinfo where id = #{id}
+		delete from userinfo where name = #{name}
 	</delete>
-	<select id="findById" resultType="User">
+	<select id="findbyName" resultType="User">
 		select 
-			id, name, password	
-		from userinfo where id = #{id}
+			name	
+		from userinfo where name = #{name}
 	</select>
 
 	<update id="update" parameterType="User"> 
-		update userinfo set name=#{name}, password=#{password} where id = #{id}
+		update userinfo set price=#{price}, seller=#{seller}, day=#{day},, productinform=#{productinform} where name = #{name}
 	</update> 
 </mapper>

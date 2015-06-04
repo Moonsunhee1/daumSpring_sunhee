@@ -1,0 +1,8 @@
+*.jar
+*.prefs
+*.springBeans
+target/m2e-wtp/web-resources/META-INF/maven/com.jejunu/daumkakao/pom.properties
+target/m2e-wtp/web-resources/META-INF/MANIFEST.MF
+.classpath
+.settings/org.eclipse.wst.common.project.facet.core.xml
+.settings/org.eclipse.wst.common.component

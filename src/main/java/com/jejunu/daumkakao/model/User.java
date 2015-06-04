@@ -5,6 +5,7 @@ public class User {
 	private String price;
 	private String seller;
 	private String day;
+	private String productinform;
 	public String getName() {
 		return name;
 	}
@@ -28,5 +29,11 @@ public class User {
 	}
 	public void setDay(String day) {
 		this.day = day;
+	}
+	public String getProductinform() {
+		return productinform;
+	}
+	public void setProductinform(String productinform) {
+		this.productinform = productinform;
 	}	
 }

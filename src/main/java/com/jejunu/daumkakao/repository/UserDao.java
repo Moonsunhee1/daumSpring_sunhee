@@ -13,11 +13,11 @@ public interface UserDao {
 
 	void insert(User user);
 
-	User findbyName(String name);
+	User findbyId(Integer id);
 
 	void update(User user);
 
-	void delete(String name);
+	void delete(Integer id);
 	
 	
 

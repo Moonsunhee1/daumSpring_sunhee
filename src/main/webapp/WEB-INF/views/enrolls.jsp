@@ -11,7 +11,7 @@
 			<div class="page-header">
 				<small>판매자의 상품</small>
 			</div>
-			<form class="form-horizontal" action="enrollsAction">
+			<form class="form-horizontal" action="enrollsAction" method="post">
 				<div class="form-group">
 					<label for="inputimage" class="col-sm-2 control-label">상품이미지</label>
 					<div class="col-sm-6">
@@ -37,13 +37,6 @@
 					<div class="col-sm-6">
 						<input type="text" class="form-control" id="inputgoodsname"
 							placeholder="판매자" name="seller">
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="inputday" class="col-sm-2 control-label">등록일</label>
-					<div class="col-sm-6">
-						<input type="text" class="form-control" id="inputgoodsname"
-							placeholder="등록일" name="day">
 					</div>
 				</div>
 				<div class="form-group">

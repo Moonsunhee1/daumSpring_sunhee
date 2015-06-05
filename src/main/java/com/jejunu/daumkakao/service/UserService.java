@@ -8,8 +8,8 @@ public interface UserService {
 
 	void enroll(User user);
 
-	User get(String name);
+	User get(Integer id);
 
-	void delete(String name);
+	void delete(Integer id);
 
 }

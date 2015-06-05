@@ -20,20 +20,20 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public void enroll(User user) {
-		if (get(user.getName()) == null)
+		if (get(user.getId()) == null)
 			userDao.insert(user);
 		else
 			userDao.update(user);
 	}
 
 	@Override
-	public User get(String name) {
-		return userDao.findbyName(name);
+	public User get(Integer id) {
+		return userDao.findbyId(id);
 	}
 
 	@Override
-	public void delete(String name) {
-		userDao.delete(name);
+	public void delete(Integer id) {
+		userDao.delete(id);
 	}
 
 }

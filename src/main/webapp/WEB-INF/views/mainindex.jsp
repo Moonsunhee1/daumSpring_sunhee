@@ -39,13 +39,13 @@
 			<tbody>
 				<c:forEach items="${userList}" var="user">
 					<tr>
-						<th><link href="resources/images.jpg"></th>
 						<td>${user.id }</td>
+						<th><link href="resources/images.jpg"></th>
 						<td>${user.name }</td>
-						<td><a href="renew?name=${user.name}">수정</a></td>
-						<td><a href="deleteAction?name=${user.name}">삭제</a></td>
-						<td>${user.price }</td>
+						<td>${user.price }</td>	
 						<td>${user.seller }</td>
+						<td><a href = "renew.jeju?id=${user.id}">수정</a></td>
+						<td><a href = "deleteAction?id=${user.id}">삭제</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

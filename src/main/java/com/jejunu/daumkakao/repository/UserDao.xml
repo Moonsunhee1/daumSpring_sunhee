@@ -11,15 +11,15 @@
 		insert into userinfo(name,price,seller,productinform) values(#{name}, #{price},#{seller}, #{productinform})
 	</insert>
 	<delete id="delete">
-		delete from userinfo where name = #{name}
+		delete from userinfo where id = #{id}
 	</delete>
-	<select id="findbyName" resultType="User">
+	<select id="findbyId" resultType="User">
 		select 
 			name	
-		from userinfo where name = #{name}
+		from userinfo where id = #{id}
 	</select>
 
 	<update id="update" parameterType="User"> 
-		update userinfo set price=#{price}, seller=#{seller}, productinform=#{productinform} where name = #{name}
+		update userinfo set name=#{name},price=#{price}, seller=#{seller}, productinform=#{productinform} where id = #{id}
 	</update> 
 </mapper>

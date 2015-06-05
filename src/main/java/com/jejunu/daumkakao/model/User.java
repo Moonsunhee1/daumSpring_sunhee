@@ -4,7 +4,7 @@ public class User {
 	private Integer id;
 	private String name;
 	private Integer price;
-	private Integer seller;
+	private String seller;
 	private String productinform;
 
 	public Integer getId() {
@@ -31,11 +31,11 @@ public class User {
 		this.price = price;
 	}
 
-	public Integer getSeller() {
+	public String getSeller() {
 		return seller;
 	}
 
-	public void setSeller(Integer seller) {
+	public void setSeller(String seller) {
 		this.seller = seller;
 	}
 

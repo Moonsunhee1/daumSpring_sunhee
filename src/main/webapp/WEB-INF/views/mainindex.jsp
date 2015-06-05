@@ -29,23 +29,23 @@
 			<caption></caption>
 			<thead>
 				<tr>
+					<th>품번</th>
 					<th>상품이미지</th>
 					<th>상품명</th>
 					<th>가격</th>
 					<th>판매자</th>
-					<th>등록일</th>
 				</tr>
 			</thead>
 			<tbody>
 				<c:forEach items="${userList}" var="user">
 					<tr>
 						<th><link href="resources/images.jpg"></th>
+						<td>${user.id }</td>
 						<td>${user.name }</td>
-						<td><a href="renewAction?name=${user.name}">수정</a></td>
+						<td><a href="renew?name=${user.name}">수정</a></td>
 						<td><a href="deleteAction?name=${user.name}">삭제</a></td>
 						<td>${user.price }</td>
 						<td>${user.seller }</td>
-						<td>${user.day }</td>
 					</tr>
 				</c:forEach>
 			</tbody>

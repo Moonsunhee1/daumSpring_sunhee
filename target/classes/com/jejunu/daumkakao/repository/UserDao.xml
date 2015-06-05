@@ -15,7 +15,7 @@
 	</delete>
 	<select id="findbyId" resultType="User">
 		select 
-			name	
+			name,price,seller,productinform
 		from userinfo where id = #{id}
 	</select>
 

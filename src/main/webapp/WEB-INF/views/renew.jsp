@@ -11,9 +11,9 @@
 		<div class="contentwrap">
 			<article class="container">
 				<div class="page-header">
-					<small>${user.id}의 상품</small>
+					<p><span id="name">${user.seller}</span>님의 상품</p>
 				</div>
-				<form class="form-horizontal" action="renewAction">
+				<form class="form-horizontal" action="modify" method="post">
 					<div class="form-group">
 						<label for="inputimage" class="col-sm-2 control-label">상품이미지</label>
 						<div class="col-sm-6">
@@ -45,7 +45,7 @@
 						<label for="goodsinform" class="col-sm-2 control-label">상품상세설명</label>
 						<div class="col-sm-6">
 							<textarea class="memo" cols="50" rows="13" name="productinform"
-								value="${user.productinform}"></textarea>
+								>${user.productinform}</textarea>
 						</div>
 					</div>
 					<div class="form-group">

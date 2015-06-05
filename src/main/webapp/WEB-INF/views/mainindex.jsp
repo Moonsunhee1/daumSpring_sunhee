@@ -44,7 +44,7 @@
 						<td>${user.name }</td>
 						<td>${user.price }</td>	
 						<td>${user.seller }</td>
-						<td><a href = "renew.jeju?id=${user.id}">수정</a></td>
+						<td><a href = "renew?id=${user.id}">수정</a></td>
 						<td><a href = "deleteAction?id=${user.id}">삭제</a></td>
 					</tr>
 				</c:forEach>

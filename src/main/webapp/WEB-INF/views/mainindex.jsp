@@ -9,20 +9,17 @@
 <link rel="stylesheet" type="text/css" href="resources/bootstrap.css">
 </head>
 <body>
-	<div id="Header"><h1>쇼핑몰 시스템</h1></div>
+	<div id="Header">
+		<h1>쇼핑몰 시스템</h1>
+	</div>
 	<div id="Menu">
 		<a href="join">
 			<button type="submit" class="btn btn-primary">회원가입</button>
 		</a> <a href="login">
 			<button type="submit" class="btn btn-primary">로그인</button>
-		</a>
-		
-		<a href="enrolls.jeju">
+		</a> <a href="enrolls.jeju">
 			<button type="submit" class="btn btn-primary">등록하기</button>
 		</a>
-		<!-- <a href="renew.jeju">
-			<button type="submit" class="btn btn-primary">수정하기</button>
-		</a> -->
 	</div>
 	<div id="Content">
 		<table class="table table-hover">
@@ -38,13 +35,14 @@
 			<tbody>
 				<c:forEach items="${userList}" var="user">
 					<tr>
-						<td>${user.id }</td>
-						<th><link href="resources/images.jpg"></th>
+						<td>${user.id}</td>
+						<td><img src="/resources/productimage/${user.image }"
+							class="img-responsive" alt="NO IMAGE" /></td>
 						<td><a href="goodsinform?id=${user.id}">${user.name }</a></td>
-						<td>${user.price }</td>	
+						<td>${user.price }</td>
 						<td>${user.seller }</td>
-						<td><a href = "renew?id=${user.id}">수정</a></td>
-						<td><a href = "deleteAction?id=${user.id}">삭제</a></td>
+						<td><a href="renew?id=${user.id}">수정</a></td>
+						<td><a href="deleteAction?id=${user.id}">삭제</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

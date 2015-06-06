@@ -6,6 +6,7 @@ public class User {
 	private Integer price;
 	private String seller;
 	private String productinform;
+	private String image;
 
 	public Integer getId() {
 		return id;
@@ -45,5 +46,13 @@ public class User {
 
 	public void setProductinform(String productinform) {
 		this.productinform = productinform;
+	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
 	}
 }

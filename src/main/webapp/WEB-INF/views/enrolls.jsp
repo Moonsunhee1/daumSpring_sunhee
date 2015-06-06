@@ -15,7 +15,7 @@
 				<div class="form-group">
 					<label for="inputimage" class="col-sm-2 control-label">상품이미지</label>
 					<div class="col-sm-6">
-						<input type="file" id="inputimage">
+						<input type="file" id="inputimage" name="image"/>
 					</div>
 				</div>
 				<div class="form-group">

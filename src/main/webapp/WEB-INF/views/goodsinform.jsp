@@ -22,11 +22,9 @@
 				</div>
 			</div>
 			<div class="col-sm-4">
-				<img src="resource/productimage" class="img-responsive"
-					alt="이미지">
+				  <img src="/resources/productimage/${user.image}" alt="NO IMAGE" class="img-responsive"/>
 			</div>
-			<div class="col-sm-4">
-
+			<div class="col-sm-6">
 				<p>가격
 					<span id="price">${user.price}</span>
 				</p>
@@ -38,7 +36,7 @@
 				<p>상품 상세 설명</p>
 				<div>${user.productinform}</div>
 			</div>
-			<div class="col-sm-2">
+			<div class="col-sm-6">
 			<a href="" class="btn btn-default">구매</a>
 			</div>
 		</article>

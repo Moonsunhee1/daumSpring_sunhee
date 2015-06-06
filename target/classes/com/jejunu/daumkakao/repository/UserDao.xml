@@ -2,24 +2,35 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jejunu.daumkakao.repository.UserDao">
-	<select id="findAll" resultType="User" >
-		select 
-			id,name,price,seller
+	<select id="findAll" resultType="User">
+		select
+		id,image,name,price,seller
 		from userinfo
 	</select>
 	<insert id="insert" parameterType="User">
-		insert into userinfo(name,price,seller,productinform) values(#{name}, #{price},#{seller}, #{productinform})
+		insert into userinfo(name,
+		<if test="image != null">
+			image,
+		</if>
+		,price,seller,productinform) values(#{name},
+		<if test="image != null">
+			#{image},
+		</if>
+		,#{price},#{seller}, #{productinform})
 	</insert>
 	<delete id="delete">
 		delete from userinfo where id = #{id}
 	</delete>
 	<select id="findbyId" resultType="User">
-		select 
-			name,price,seller,productinform
+		select
+		name,image,price,seller,productinform
 		from userinfo where id = #{id}
 	</select>
 
-	<update id="update" parameterType="User"> 
-		update userinfo set name=#{name},price=#{price}, seller=#{seller}, productinform=#{productinform} where id = #{id}
-	</update> 
+	<update id="update" parameterType="User">
+		update userinfo set
+		name=#{name},image=#{image},price=#{price},
+		seller=#{seller},
+		productinform=#{productinform} where id = #{id}
+	</update>
 </mapper>

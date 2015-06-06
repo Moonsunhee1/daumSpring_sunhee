@@ -13,7 +13,8 @@
 				<div class="page-header">
 					<p><span id="name">${user.seller}</span>님의 상품</p>
 				</div>
-				<form class="form-horizontal" action="modify" method="post">
+				<form action="/modifyAction" class="form-horizontal"  method="post">
+					<input type = "hidden" name="id" value="${param.id}" />
 					<div class="form-group">
 						<label for="inputimage" class="col-sm-2 control-label">상품이미지</label>
 						<div class="col-sm-6">
@@ -48,11 +49,13 @@
 								>${user.productinform}</textarea>
 						</div>
 					</div>
+					
 					<div class="form-group">
 						<label for="inputName" class="col-sm-2 control-label"></label>
+						
 						<div class="col-sm-6">
 							<button type="submit" class="btn btn-primary">수정</button>
-							<button type="reset" class="btn btn-primary">취소</button>
+							<a href="/mainindex" class="btn btn-primary">취소</a>
 						</div>
 					</div>
 				</form>

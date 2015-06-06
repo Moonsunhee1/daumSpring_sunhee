@@ -8,9 +8,10 @@ public interface UserService {
 
 	void enroll(User user);
 
-	User get(Integer id);
-
 	void delete(Integer id);
 
+	User get(Integer id);
+
+	void modify(User user);
 
 }

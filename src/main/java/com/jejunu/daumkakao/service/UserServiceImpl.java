@@ -20,10 +20,7 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public void enroll(User user) {
-		if (get(user.getId()) == null)
-			userDao.insert(user);
-		else
-			userDao.update(user);
+		userDao.insert(user);
 	}
 
 	@Override
@@ -35,5 +32,11 @@ public class UserServiceImpl implements UserService {
 	public void delete(Integer id) {
 		userDao.delete(id);
 	}
+
+	@Override
+	public void modify(User user) {
+		userDao.update(user);
+	}	
+
 
 }

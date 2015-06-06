@@ -15,10 +15,8 @@ public interface UserDao {
 
 	User findbyId(Integer id);
 
-	void update(User user);
-
 	void delete(Integer id);
-	
-	
+
+	void update(User user);
 
 }

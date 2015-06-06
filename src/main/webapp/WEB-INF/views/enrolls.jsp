@@ -49,7 +49,7 @@
 					<label for="inputName" class="col-sm-2 control-label"></label>
 					<div class="col-sm-6">
 						<button type="submit" class="btn btn-primary">등록</button>
-						<button type="reset" class="btn btn-primary">취소</button>
+						<a href="/mainindex" class="btn btn-primary">취소</a>
 					</div>
 				</div>
 			</form>

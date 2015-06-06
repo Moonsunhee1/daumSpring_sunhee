@@ -25,7 +25,7 @@
 		</a> -->
 	</div>
 	<div id="Content">
-		<table class="table table-striped">
+		<table>
 			<caption></caption>
 			<thead>
 				<tr>

@@ -1,33 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.jejunu.daumkakao.repository.UserDao">
-	<select id="findAll" resultType="User">
+<mapper namespace="com.jejunu.daumkakao.repository.ProductDao">
+	<select id="findAll" resultType="Product">
 		select
 		id,image,name,price,seller
 		from userinfo
 	</select>
-	<insert id="insert" parameterType="User">
-		insert into userinfo(name,
+	<insert id="insert" parameterType="Product">
+		insert into userinfo(
+		name,
 		<if test="image != null">
 			image,
 		</if>
-		,price,seller,productinform) values(#{name},
+		price,
+		seller,
+		productinform)
+		values(
+		#{name},
 		<if test="image != null">
 			#{image},
 		</if>
-		,#{price},#{seller}, #{productinform})
+		#{price},
+		#{seller},
+		#{productinform})
 	</insert>
 	<delete id="delete">
 		delete from userinfo where id = #{id}
 	</delete>
-	<select id="findbyId" resultType="User">
+	<select id="findbyId" resultType="Product">
 		select
 		name,image,price,seller,productinform
 		from userinfo where id = #{id}
 	</select>
 
-	<update id="update" parameterType="User">
+	<update id="update" parameterType="Product">
 		update userinfo set
 		name=#{name},image=#{image},price=#{price},
 		seller=#{seller},

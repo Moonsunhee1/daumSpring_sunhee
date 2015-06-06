@@ -4,17 +4,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jejunu.daumkakao.model.User;
-import com.jejunu.daumkakao.service.UserService;
+import com.jejunu.daumkakao.model.Product;
+import com.jejunu.daumkakao.service.ProductService;
 
 @Controller
 public class imformproduct {
 
 	@Autowired
-	UserService userService;
+	ProductService productService;
 	
 	@RequestMapping("/goodsinform")
-	public User goodsinform(Integer id){
-		return userService.get(id);
+	public Product goodsinform(Integer id){
+		return productService.get(id);
 	}
 }

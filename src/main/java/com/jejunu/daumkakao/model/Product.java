@@ -1,6 +1,6 @@
 package com.jejunu.daumkakao.model;
 
-public class User {
+public class Product {
 	private Integer id;
 	private String name;
 	private Integer price;

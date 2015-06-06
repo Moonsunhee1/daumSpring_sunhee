@@ -33,16 +33,16 @@
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach items="${userList}" var="user">
+				<c:forEach items="${productList}" var="product">
 					<tr>
-						<td>${user.id}</td>
-						<td><img src="/resources/productimage/${user.image }"
+						<td>${product.id}</td>
+						<td><img src="/resources/productimage/${product.image }"
 							class="img-responsive" alt="NO IMAGE" /></td>
-						<td><a href="goodsinform?id=${user.id}">${user.name }</a></td>
-						<td>${user.price }</td>
-						<td>${user.seller }</td>
-						<td><a href="renew?id=${user.id}">수정</a></td>
-						<td><a href="deleteAction?id=${user.id}">삭제</a></td>
+						<td><a href="goodsinform?id=${product.id}">${product.name }</a></td>
+						<td>${product.price }</td>
+						<td>${product.seller }</td>
+						<td><a href="renew?id=${product.id}">수정</a></td>
+						<td><a href="deleteAction?id=${product.id}">삭제</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

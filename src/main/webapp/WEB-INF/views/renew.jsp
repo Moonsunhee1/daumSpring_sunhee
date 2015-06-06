@@ -12,7 +12,7 @@
 		<article class="container">
 			<div class="page-header">
 				<p>
-					<span id="name">${user.seller}</span>님의 상품
+					<span id="name">${product.seller}</span>님의 상품
 				</p>
 			</div>
 			<form action="/modifyAction" class="form-horizontal" method="post">
@@ -23,7 +23,7 @@
 						<input type="file" id="inputimage" name="image" />
 					</div>
 					<c:if test="${usert != null}">
-						<img src="/resources/productimage/${user.image}"
+						<img src="/resources/productimage/${product.image}"
 							class="img-responsive" alt="NO IMAGE" />
 					</c:if>
 				</div>
@@ -31,27 +31,27 @@
 					<label for="inputgoodsname" class="col-sm-2 control-label">상품명</label>
 					<div class="col-sm-6">
 						<input type="text" class="form-control" id="inputgoodsname"
-							placeholder="상품명" name="name" value="${user.name}">
+							placeholder="상품명" name="name" value="${product.name}">
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="inputRipple" class="col-sm-2 control-label">가격</label>
 					<div class="col-sm-6">
 						<input type="text" class="form-control" id="inputprice"
-							placeholder="가격" name="price" value="${user.price}">
+							placeholder="가격" name="price" value="${product.price}">
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="inputseller" class="col-sm-2 control-label">판매자</label>
 					<div class="col-sm-6">
 						<input type="text" class="form-control" id="inputseller"
-							placeholder="판매자" name="seller" value="${user.seller}">
+							placeholder="판매자" name="seller" value="${product.seller}">
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="goodsinform" class="col-sm-2 control-label">상품상세설명</label>
 					<div class="col-sm-6">
-						<textarea class="memo" cols="50" rows="13" name="productinform">${user.productinform}</textarea>
+						<textarea class="memo" cols="50" rows="13" name="productinform">${product.productinform}</textarea>
 					</div>
 				</div>
 

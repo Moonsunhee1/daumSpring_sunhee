@@ -25,8 +25,7 @@
 		</a> -->
 	</div>
 	<div id="Content">
-		<table>
-			<caption></caption>
+		<table class="table table-hover">
 			<thead>
 				<tr>
 					<th>품번</th>
@@ -41,7 +40,7 @@
 					<tr>
 						<td>${user.id }</td>
 						<th><link href="resources/images.jpg"></th>
-						<td>${user.name }</td>
+						<td><a href="goodsinform?id=${user.id}">${user.name }</a></td>
 						<td>${user.price }</td>	
 						<td>${user.seller }</td>
 						<td><a href = "renew?id=${user.id}">수정</a></td>

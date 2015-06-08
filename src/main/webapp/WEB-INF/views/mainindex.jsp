@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
+<%@ page session="true"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,44 +10,53 @@
 <link rel="stylesheet" type="text/css" href="resources/bootstrap.css">
 </head>
 <body>
-	<div id="Header">
-		<h1>쇼핑몰 시스템</h1>
-	</div>
-	<div id="Menu">
-		<a href="join">
-			<button type="submit" class="btn btn-primary">회원가입</button>
-		</a> <a href="login">
-			<button type="submit" class="btn btn-primary">로그인</button>
-		</a> <a href="enrolls.jeju">
-			<button type="submit" class="btn btn-primary">등록하기</button>
-		</a>
-	</div>
-	<div id="Content">
-		<table class="table table-hover">
-			<thead>
-				<tr>
-					<th>품번</th>
-					<th>상품이미지</th>
-					<th>상품명</th>
-					<th>가격</th>
-					<th>판매자</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach items="${productList}" var="product">
+	<div class="contentwrap">
+		<article class="container">
+		<div class="page-header">
+			<h1>서니의 쇼핑몰</h1>
+		</div>
+		<c:if test="${sessionScope.userlogin.id==null}">
+			<div>
+				<a href="join.jeju" class="btn btn-primary">회원가입</a> <a href="login"
+					class="btn btn-primary">로그인</a>
+			</div>
+		</c:if> <c:if test="${sessionScope.userlogin.id!=null}">
+			<div>
+				<p>
+					<span>${sessionScope.userlogin.id}님 안녕하세요</span>
+				</p>
+				<a href="enrolls.jeju" class="btn btn-primary">등록하기</a> <a
+					href="/logout" class="btn btn-primary">로그아웃</a>
+			</div>
+		</c:if>
+		<div id="Content">
+			<table class="table table-hover">
+				<thead>
 					<tr>
-						<td>${product.id}</td>
-						<td><img src="/resources/productimage/${product.image }"
-							class="img-responsive" alt="NO IMAGE" /></td>
-						<td><a href="goodsinform?id=${product.id}">${product.name }</a></td>
-						<td>${product.price }</td>
-						<td>${product.seller }</td>
-						<td><a href="renew?id=${product.id}">수정</a></td>
-						<td><a href="deleteAction?id=${product.id}">삭제</a></td>
+						<th>품번</th>
+						<th>상품이미지</th>
+						<th>상품명</th>
+						<th>가격</th>
+						<th>판매자</th>
 					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
+				</thead>
+				<tbody>
+					<c:forEach items="${productList}" var="product">
+						<tr>
+							<td>${product.id}</td>
+							<td><img src="/resources/productimage/${product.image }"
+								class="img-responsive" alt="NO IMAGE" /></td>
+							<td><a href="goodsinform?id=${product.id}">${product.name }</a></td>
+							<td>${product.price }</td>
+							<td>${product.seller }</td>
+							<td><a href="renew?id=${product.id}">수정</a></td>
+							<td><a href="deleteAction?id=${product.id}">삭제</a></td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+		</div>
+		</article>
 	</div>
 </body>
 </html>

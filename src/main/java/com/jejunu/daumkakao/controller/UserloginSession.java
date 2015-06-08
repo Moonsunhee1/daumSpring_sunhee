@@ -17,7 +17,7 @@ public class UserloginSession {
 	@Autowired
 	private UserService userService;
 
-	@RequestMapping("/login")
+	@RequestMapping(value = "/login", method = RequestMethod.GET )
 	public String loginsession() {
 		return "login";
 	}
@@ -29,6 +29,8 @@ public class UserloginSession {
 		User usersignin = userService.signin(user);
 		if (usersignin != null) {
 			session.setAttribute("userlogin", usersignin);
+		} else { 
+			mod.setViewName("redirect:/login");
 		}
 		return mod;
 	}

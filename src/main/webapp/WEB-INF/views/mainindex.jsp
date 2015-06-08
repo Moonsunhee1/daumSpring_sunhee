@@ -23,7 +23,7 @@
 		</c:if> <c:if test="${sessionScope.userlogin.id!=null}">
 			<div>
 				<p>
-					<span>${sessionScope.userlogin.id}님 안녕하세요</span>
+					<span>${sessionScope.userlogin.name}님 안녕하세요</span>
 				</p>
 				<a href="enrolls.jeju" class="btn btn-primary">등록하기</a> <a
 					href="/logout" class="btn btn-primary">로그아웃</a>
@@ -49,8 +49,10 @@
 							<td><a href="goodsinform?id=${product.id}">${product.name }</a></td>
 							<td>${product.price }</td>
 							<td>${product.seller }</td>
+							<c:if test="${sessionScope.userlogin.id!=null}">
 							<td><a href="renew?id=${product.id}">수정</a></td>
 							<td><a href="deleteAction?id=${product.id}">삭제</a></td>
+							</c:if>
 						</tr>
 					</c:forEach>
 				</tbody>

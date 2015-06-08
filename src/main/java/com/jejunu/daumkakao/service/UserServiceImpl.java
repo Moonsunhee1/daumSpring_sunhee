@@ -12,6 +12,10 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private UserDao userDao;
 
+	@Override
+	public void signupUser(User user) {
+		userDao.userinsert(user);
+	}
 
 	public User signin(User user) {
 		return userDao.findbyUser(user);

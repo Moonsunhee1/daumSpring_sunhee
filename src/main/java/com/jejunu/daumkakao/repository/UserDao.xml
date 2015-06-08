@@ -5,7 +5,12 @@
 	<select id="findbyUser" resultType="User">
 		select
 		id,name,password
-		from user where id = #{id} and password=#{password}
+		from
+		user where id = #{id} and password=#{password}
 	</select>
-
+	<insert id="userinsert" parameterType="User">
+		insert into
+		user(id,name,password,authority) values(#{id}, #{name}, #{password},
+		#{authority})
+	</insert>
 </mapper>

@@ -11,7 +11,7 @@ public interface ProductDao {
 
 	List<Product> findAll();
 
-	void insert(Product user);
+	void insert(Product product);
 
 	Product findbyId(Integer id);
 

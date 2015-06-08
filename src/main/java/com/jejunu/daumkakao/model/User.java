@@ -5,7 +5,7 @@ public class User {
 	private String id;
 	private String name;
 	private String password;
-	private String set;
+	private String authority;
 
 	public String getId() {
 		return id;
@@ -31,12 +31,13 @@ public class User {
 		this.password = password;
 	}
 
-	public String getSet() {
-		return set;
+
+	public String getAuthority() {
+		return authority;
 	}
 
-	public void setSet(String set) {
-		this.set = set;
+	public void setAuthority(String authority) {
+		this.authority = authority;
 	}
 	
 }

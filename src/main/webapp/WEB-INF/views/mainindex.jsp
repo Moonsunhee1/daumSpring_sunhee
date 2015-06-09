@@ -46,7 +46,7 @@
 							<td>${product.id}</td>
 							<td><img src="/resources/productimage/${product.image }"
 								class="img-responsive" alt="NO IMAGE" /></td>
-							<td><a href="goodsinform?id=${product.id}">${product.name }</a></td>
+							<td><a href="goodsinforms?id=${product.id}">${product.name }</a></td>
 							<td>${product.price }</td>
 							<td>${product.seller }</td>
 							<c:if test="${sessionScope.userlogin.id!=null}">

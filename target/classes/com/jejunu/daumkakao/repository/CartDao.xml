@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jejunu.daumkakao.repository.CartDao">
+	<select id="findAll" resultType="Cartproduct">
+		select
+		id,name,image,price,seller
+		from cartlist
+	</select>
+	<insert id="insert" parameterType="Cartproduct">
+		insert into cartlist(
+		name,
+		<if test="image != null">
+			image,
+		</if>
+		price,
+		seller)
+		
+		values(
+		#{name},
+		<if test="image != null">
+			#{image},
+		</if>
+		#{price},
+		#{seller})
+	</insert>
+	<!-- <delete id="delete"> delete from userinfo where id = #{id} </delete> 
+		<select id="findbyId" resultType="Product"> select name,image,price,seller,productinform 
+		from userinfo where id = #{id} </select> <update id="update" parameterType="Product"> 
+		update userinfo set name=#{name},image=#{image},price=#{price}, seller=#{seller}, 
+		productinform=#{productinform} where id = #{id} </update> -->
+</mapper>

@@ -13,7 +13,7 @@ public class imformproduct {
 	@Autowired
 	ProductService productService;
 	
-	@RequestMapping("/goodsinform")
+	@RequestMapping("/goodsinforms")
 	public Product goodsinform(Integer id){
 		return productService.get(id);
 	}

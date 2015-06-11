@@ -38,8 +38,8 @@
 					<label for="inputID" class="col-sm-2 control-label">권한</label>
 					<div class="col-sm-6">
 						<select class="form-control" name="authority">
-							<option value="seller">판매자</option>
-							<option value="consumer">사용자</option>
+							<option value="seller" name="seller">판매자</option>
+							<option value="consumer" name="consumer">사용자</option>
 						</select>
 					</div>
 				</div>

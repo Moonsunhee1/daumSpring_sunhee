@@ -39,7 +39,7 @@
 							<td>${cartproduct.id}</td>
 							<td>${cartproduct.name }</td>
 							<td><img src="/resources/productimage/${cartproduct.image }"
-								class="img-responsive" alt="NO IMAGE"/></td>
+								class="img-responsive"/></td>
 							<td>${cartproduct.price }</td>
 							<td>${cartproduct.seller }</td>
 							<td><a href="renew?id=${product.id}">구매취소</a></td>

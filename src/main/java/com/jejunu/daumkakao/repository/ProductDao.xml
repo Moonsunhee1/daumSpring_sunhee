@@ -5,10 +5,10 @@
 	<select id="findAll" resultType="Product">
 		select
 		id,image,name,price,seller
-		from userinfo
+		from productinfo
 	</select>
 	<insert id="insert" parameterType="Product">
-		insert into userinfo(
+		insert into productinfo(
 		name,
 		<if test="image != null">
 			image,
@@ -26,16 +26,16 @@
 		#{productinform})
 	</insert>
 	<delete id="delete">
-		delete from userinfo where id = #{id}
+		delete from productinfo where id = #{id}
 	</delete>
 	<select id="findbyId" resultType="Product">
 		select
 		name,image,price,seller,productinform
-		from userinfo where id = #{id}
+		from productinfo where id = #{id}
 	</select>
 
 	<update id="update" parameterType="Product">
-		update userinfo set
+		update productinfo set
 		name=#{name},image=#{image},price=#{price},
 		seller=#{seller},
 		productinform=#{productinform} where id = #{id}

@@ -10,10 +10,11 @@
 	<div class="contentwrap">
 		<article class="container">
 			<div class="page-header">
-				<small>판매자의 상품</small>
+				<span>${sessionScope.userlogin.name}님 안녕하세요</span>
 			</div>
 			<form class="form-horizontal" action="/Addcart" method="post">
 				<input type="hidden" name="id" value="${param.id}" />
+				<input type="hidden" name="userinfo" value="${sessionScope.userlogin.id}" />
 				<div class="form-group">
 					<label for="inputimage" class="col-sm-2 control-label">상품이미지</label>
 					<div class="col-sm-4">

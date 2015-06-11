@@ -9,7 +9,7 @@
 	<div class="contentwrap">
 		<article class="container">
 			<div class="page-header">
-				<small>판매자의 상품</small>
+				<span>${sessionScope.userlogin.name}님 안녕하세요</span>
 			</div>
 			<form class="form-horizontal" action="enrollsAction" method="post">
 				<div class="form-group">
@@ -36,7 +36,7 @@
 					<label for="inputseller" class="col-sm-2 control-label">판매자</label>
 					<div class="col-sm-6">
 						<input type="text" class="form-control" id="inputgoodsname"
-							placeholder="판매자" name="seller">
+							 name="seller" value="${sessionScope.userlogin.name}" readonly="readonly">
 					</div>
 				</div>
 				<div class="form-group">

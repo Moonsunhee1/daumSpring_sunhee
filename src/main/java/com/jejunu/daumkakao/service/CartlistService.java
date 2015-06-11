@@ -9,7 +9,7 @@ import com.jejunu.daumkakao.model.Cartproduct;
 
 public interface CartlistService {
 
-	List<Cartproduct> list();
+	List<Cartproduct> list(String userinfo);
 
 	void addproduct(Cartproduct cartproduct);
 

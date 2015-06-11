@@ -15,8 +15,8 @@ public class CartlistServiceImpl implements CartlistService {
 	private CartDao cartDao;
 
 	@Override
-	public List<Cartproduct> list() {
-		return cartDao.findAll();
+	public List<Cartproduct> list(String userinfo) {
+		return cartDao.findAll(userinfo);
 	}
 
 	@Override

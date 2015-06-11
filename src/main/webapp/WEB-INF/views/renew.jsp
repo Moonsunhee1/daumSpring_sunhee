@@ -45,7 +45,7 @@
 					<label for="inputseller" class="col-sm-2 control-label">판매자</label>
 					<div class="col-sm-6">
 						<input type="text" class="form-control" id="inputseller"
-							placeholder="판매자" name="seller" value="${product.seller}">
+							placeholder="판매자" name="seller" value="${product.seller}" readonly="readonly">
 					</div>
 				</div>
 				<div class="form-group">

@@ -25,10 +25,17 @@
 				<p>
 					<span>${sessionScope.userlogin.name}님 안녕하세요</span>
 				</p>
-				<a href="enrolls.jeju" class="btn btn-primary">등록하기</a> <a
-					href="/logout" class="btn btn-primary">로그아웃</a>
+				<c:if test="${sessionScope.userlogin.authority=='consumer'}">
+					<a href="cartlists" class="btn btn-primary">구매목록</a>
+				</c:if>
+				<a href="/logout" class="btn btn-primary">로그아웃</a>
+				<c:if test="${sessionScope.userlogin.authority=='seller'}">
+					<a href="enrolls.jeju" class="btn btn-primary">등록하기</a>
+				</c:if>
 			</div>
 		</c:if>
+
+
 		<div id="Content">
 			<table class="table table-hover">
 				<thead>
@@ -45,13 +52,14 @@
 						<tr>
 							<td>${product.id}</td>
 							<td><img src="/resources/productimage/${product.image }"
-								class="img-responsive" alt="NO IMAGE" /></td>
+								class="img-responsive" alt="NO IMAGE"
+								style="height: 100px; weight: 100px;" /></td>
 							<td><a href="goodsinforms?id=${product.id}">${product.name }</a></td>
 							<td>${product.price }</td>
 							<td>${product.seller }</td>
-							<c:if test="${sessionScope.userlogin.id!=null}">
-							<td><a href="renew?id=${product.id}">수정</a></td>
-							<td><a href="deleteAction?id=${product.id}">삭제</a></td>
+							<c:if test="${sessionScope.userlogin.name==product.seller}">
+								<td><a href="renew?id=${product.id}">수정</a></td>
+								<td><a href="deleteAction?id=${product.id}">삭제</a></td>
 							</c:if>
 						</tr>
 					</c:forEach>

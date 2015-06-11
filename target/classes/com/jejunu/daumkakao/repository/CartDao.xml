@@ -4,19 +4,21 @@
 <mapper namespace="com.jejunu.daumkakao.repository.CartDao">
 	<select id="findAll" resultType="Cartproduct">
 		select
-		id,name,image,price,seller
-		from cartlist
+		userinfo,id,name,image,price,seller
+		from cartlist where userinfo = #{userinfo}
 	</select>
 	<insert id="insert" parameterType="Cartproduct">
 		insert into cartlist(
+		userinfo,
 		name,
 		<if test="image != null">
 			image,
 		</if>
 		price,
 		seller)
-		
+
 		values(
+		#{userinfo},
 		#{name},
 		<if test="image != null">
 			#{image},

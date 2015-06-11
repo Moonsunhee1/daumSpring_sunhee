@@ -4,7 +4,7 @@
 <mapper namespace="com.jejunu.daumkakao.repository.UserDao">
 	<select id="findbyUser" resultType="User">
 		select
-		id,name,password
+		id,name,password,authority
 		from
 		user where id = #{id} and password=#{password}
 	</select>

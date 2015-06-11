@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jejunu.daumkakao.repository.WishDao">
+	<select id="findAll" resultType="Wishproduct">
+		select
+		userinfo,id,name,image,price,seller
+		from wishlist where userinfo =
+		#{userinfo}
+	</select>
+	<insert id="insert" parameterType="Wishproduct">
+		insert into wishlist(
+		userinfo,
+		name,
+		<if test="image != null">
+			image,
+		</if>
+		price,
+		seller)
+
+		values(
+		#{userinfo},
+		#{name},
+		<if test="image != null">
+			#{image},
+		</if>
+		#{price},
+		#{seller})
+	</insert>
+	<delete id="delete">
+		delete from wishlist where id = #{id}
+	</delete>
+</mapper>

@@ -5,7 +5,8 @@
 	<select id="findAll" resultType="Cartproduct">
 		select
 		userinfo,id,name,image,price,seller
-		from cartlist where userinfo = #{userinfo}
+		from cartlist where userinfo =
+		#{userinfo}
 	</select>
 	<insert id="insert" parameterType="Cartproduct">
 		insert into cartlist(
@@ -26,6 +27,8 @@
 		#{price},
 		#{seller})
 	</insert>
+
+	
 	<!-- <delete id="delete"> delete from userinfo where id = #{id} </delete> 
 		<select id="findbyId" resultType="Product"> select name,image,price,seller,productinform 
 		from userinfo where id = #{id} </select> <update id="update" parameterType="Product"> 

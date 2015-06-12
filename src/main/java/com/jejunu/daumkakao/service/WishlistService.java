@@ -2,8 +2,7 @@ package com.jejunu.daumkakao.service;
 
 import java.util.List;
 
-import com.jejunu.daumkakao.controller.Wishproduct;
-import com.jejunu.daumkakao.model.Cartproduct;
+import com.jejunu.daumkakao.model.Wishproduct;
 
 public interface WishlistService {
 

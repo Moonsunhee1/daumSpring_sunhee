@@ -13,14 +13,15 @@
 				<span>${sessionScope.userlogin.name}님 안녕하세요</span>
 			</div>
 			<form class="form-horizontal" action="/Addcart" method="post">
-				<input type="hidden" name="id" value="${param.id}" />
-				<input type="hidden" name="userinfo" value="${sessionScope.userlogin.id}" />
+				<input type="hidden" name="id" value="${param.id}" /> <input
+					type="hidden" name="userinfo" value="${sessionScope.userlogin.id}" />
 				<div class="form-group">
 					<label for="inputimage" class="col-sm-2 control-label">상품이미지</label>
 					<div class="col-sm-4">
 						<img src="/resources/productimage/${product.image}" alt="NO IMAGE"
-							class="img-responsive" /> 
-							<input type="hidden" id="inputimage" name="image" value="{product.image}" />
+							class="img-responsive" name="image" /> 
+							<input type="hidden" id="inputimage"
+							name="image" value="{product.image}" />
 					</div>
 				</div>
 				<div class="form-group">
@@ -55,7 +56,8 @@
 				<div class="form-group">
 					<label for="inputName" class="col-sm-2 control-label"></label>
 					<div class="col-sm-6">
-						<button type="submit" class="btn btn-primary">구매</button>
+						<input type="submit" class="btn btn-primary" value="구매"/>
+						<input type="submit" class="btn btn-primary" formaction="Addwish" value="장바구니"/>
 						<a href="/mainindex" class="btn btn-primary">취소</a>
 					</div>
 				</div>

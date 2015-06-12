@@ -24,13 +24,6 @@ public class CartlistProduct {
 	public List<Cartproduct> list(User user, HttpSession session) {
 
 		User usercartlist = (User) session.getAttribute("userlogin");
-		String userinfo = usercartlist.getId();
-
-		System.out.println(userinfo);
-
-		List<Cartproduct> a = cartlistService.list(userinfo);
-		System.out.println(a.get(0).getName());
-
-		return cartlistService.list(userinfo);
+		return cartlistService.list(usercartlist.getId());
 	}
 }

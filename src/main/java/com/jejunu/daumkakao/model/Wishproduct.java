@@ -9,6 +9,14 @@ public class Wishproduct {
 	private String price;
 	private String seller;
 
+	public String getUserinfo() {
+		return userinfo;
+	}
+
+	public void setUserinfo(String userinfo) {
+		this.userinfo = userinfo;
+	}
+
 	public Integer getId() {
 		return id;
 	}
@@ -47,13 +55,5 @@ public class Wishproduct {
 
 	public void setSeller(String seller) {
 		this.seller = seller;
-	}
-
-	public String getUserinfo() {
-		return userinfo;
-	}
-
-	public void setUserinfo(String userinfo) {
-		this.userinfo = userinfo;
 	}
 }

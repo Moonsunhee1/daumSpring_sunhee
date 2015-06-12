@@ -15,13 +15,13 @@ public class CartlistServiceImpl implements CartlistService {
 	private CartDao cartDao;
 
 	@Override
-	public List<Cartproduct> list(String userinfo) {
-		return cartDao.findAll(userinfo);
+	public void addproduct(Cartproduct cartproduct) {
+		cartDao.insert(cartproduct);
 	}
 
 	@Override
-	public void addproduct(Cartproduct cartproduct) {
-		cartDao.insert(cartproduct);
+	public List<Cartproduct> list(String userinfo) {
+		return cartDao.findAll(userinfo);
 	}
 
 }

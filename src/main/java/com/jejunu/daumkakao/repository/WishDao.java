@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.jejunu.daumkakao.controller.Wishproduct;
+import com.jejunu.daumkakao.model.Wishproduct;
 
 @Repository
 public interface WishDao {

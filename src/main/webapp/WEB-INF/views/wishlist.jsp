@@ -1,63 +1,54 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
+<%@ page session="true"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<title>장바구니</title>
-	<link rel="stylesheet" type="text/css" href="bootstrap.css">
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>사용자 등록</title>
+<link rel="stylesheet" type="text/css" href="resources/bootstrap.css">
 </head>
 <body>
-<div class="contentwrap">
-<article class="container">
-	 <div class="page-header">
-	  <h1>장바구니</h1>
-    </div>
-
-    <div class="row">
-		<div class="col-sm-4"></div>
-		<div class="col-sm-4"></div>
-		<div class="col-sm-4"></div>
-		<div class="col-sm-4"></div>
+	<div class="contentwrap">
+		<article class="container">
+		<div class="page-header">
+			<h1>서니의 쇼핑몰</h1>
+		</div>
+		<div>
+			<p>
+				<span>${sessionScope.userlogin.name}님 안녕하세요</span>
+			</p>
+			<a href="mainindex.jeju" class="btn btn-primary">목록보기</a> <a
+				href="/logout" class="btn btn-primary">로그아웃</a>
+		</div>
+		<div id="Content">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>품번</th>
+						<th>상품명</th>
+						<th>상품이미지</th>
+						<th>가격</th>
+						<th>판매자</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach items="${wishproductList}" var="wishproduct">
+						<tr>
+							<td>${wishproduct.id}</td>
+							<td>${wishproduct.name }</td>
+							<td><img src="/resources/productimage/${wishproduct.image }"
+								class="img-responsive"/></td>
+							<td>${wishproduct.price }</td>
+							<td>${wishproduct.seller }</td>
+							<td><a href="wishDelete?id=${wishdelete.id}">구매취소</a></td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+		</div>
+		</article>
 	</div>
-
-	<table class="table table-striped">
-		<thead>
-			<tr>
-				<td>상품이미지</td>
-				<td>상품명</td>
-				<td>가격</td>
-				<td>판매자</td>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td><img src="image.gif"></td>
-				<td>품질좋은 상품 A 20% 할인판매</td>
-				<td>15000</td>
-				<td>(주)제주대학교</td>
-				<td><button type="reset" class="btn btn-primary">주문취소</button></td>
-			</tr>
-			<tr>
-				<td><img src="image.gif"></td>
-				<td>품질좋은 상품 A 20% 할인판매</td>
-				<td>15000</td>
-				<td>(주)제주대학교</td>
-				<td><button type="reset" class="btn btn-primary">주문취소</button></td>
-			</tr>
-			<tr>
-				<td><img src="image.gif"></td>
-				<td>품질좋은 상품 A 20% 할인판매</td>
-				<td>15000</td>
-				<td>(주)제주대학교</td>
-				<td><button type="reset" class="btn btn-primary">주문취소</button></td>
-			</tr>
-		</tbody>
-	</table>
-	<div class="form-group">
-    <label for="totalprice" class="col-sm-8 control-label" align="center">총가격</label>
-    <p class="totalprice">45,000</p>
-</div>
-</article>
-</div>
-
 </body>
 </html>

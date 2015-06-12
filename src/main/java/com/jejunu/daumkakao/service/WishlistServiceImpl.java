@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jejunu.daumkakao.controller.Wishproduct;
-import com.jejunu.daumkakao.model.Cartproduct;
+import com.jejunu.daumkakao.controller.Addwishproduct;
+import com.jejunu.daumkakao.model.Wishproduct;
 import com.jejunu.daumkakao.repository.WishDao;
 
 @Service
@@ -28,7 +28,6 @@ public class WishlistServiceImpl implements WishlistService {
 	@Override
 	public void addwish(Wishproduct wishproduct) {
 		wishdao.insert(wishproduct);
-
 	}
 
 }

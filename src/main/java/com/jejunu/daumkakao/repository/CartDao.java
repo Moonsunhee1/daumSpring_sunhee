@@ -9,8 +9,8 @@ import com.jejunu.daumkakao.model.Cartproduct;
 @Repository
 public interface CartDao {
 
-	List<Cartproduct> findAll(String userinfo);
-
 	void insert(Cartproduct cartproduct);
+
+	List<Cartproduct> findAll(String userinfo);
 
 }
